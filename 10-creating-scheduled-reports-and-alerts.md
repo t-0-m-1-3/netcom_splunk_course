@@ -33,6 +33,22 @@ Sending reports via email
 * You can also `embed` a report results, to make them acccessible from the web. 
 
 ## What Are Alerts
+### The alerting workflow
+* Alerts combine a saved search, configurations for type and trigger conditions, and alert actions. Here are some details about how the different parts of an alert work together.
+
+* **Search: What do you want to track?**
+
+* **Alert type: How often do you want to check for events?**
+  * The alert uses the saved search to check for events. 
+  * Adjust the alert type to configure how often the search runs. 
+  * Use a scheduled alert to check for events on a regular basis. You can also use a real-time alert to monitor for events continuously.
+
+* **Alert trigger conditions and throttling: How often do you want to trigger an alert?**  
+  * An alert does not have to trigger every time it generates search results. 
+
+* **Alert Action: What happens when the alert triggers?**
+  * When an alert triggers, it can initialize one or more alert actions. 
+    
 * Alerts are based on seraches that either ran:
   * On a regular schedule
   * in real time 
