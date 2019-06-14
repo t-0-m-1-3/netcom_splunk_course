@@ -11,23 +11,53 @@
 * You can remove fields by passing in False i.e.`showperc=False`
 * *BY* clauses can be used to show results over a set of fields
  `index=web sourcetype=access_combined action=purchase status=200 | top limit=20 categoryId`
-Using the top command with a single field:
+ 
+* Using the top command with a single field:
 `index=security sourcetype=linux_secure (fail* OR invalid) | top limit=5 src_ip`
-Using the top command with multiple fields:
+
+* Using the top command with multiple fields:
 `index=network sourcetype=cisco_wsa_squid | top cs_username x_webcat_code_full limit=3`
-Using top with a single field and a by clause:
-*Top 3 web categories browsed by user*
+
+* Using top with a single field and a by clause:
+* *Top 3 web categories browsed by user*
 `index=network sourcetype=cisco_wsa_squid | top x_webcat_code_full  by cs_username limit=3`
-*Top 3 users for each caetgory*
+* *Top 3 users for each caetgory*
 `index=network sourcetype=cisco_wsa_squid | top cs_username by x_webcat_code_full limit=3`
-*Display the Top 3 Web and User Categories, rename the count field, show count but not percent*
+* *Display the Top 3 Web and User Categories, rename the count field, show count but not percent*
 `index=network sourcetype=cisco_wsa_squid | top cs_username x_webcat_code_full limit=3 countfield="Total Viewed" showperc=f`
 
+* Return the 20 most common values for a field
+
+`sourcetype=access_* | top limit=20 referer`
+
+This screen image shows the results of the search. There are three columns in the results: referer, count, and percent.
+Example 2: Return top values for one field organized by another field
+
+This search returns the top "action" values for each "referer_domain".
+
+`sourcetype=access_* | top action by referer_domain`
+
+Because a limit is not specified, this returns all the combinations of values for "action" and "referer_domain" as well as the counts and percentages:
+
+
+* Returns the top product purchased for each category
+    * **After you configure the field lookup, you can run this search using the time range, All time.**
+`sourcetype=access_* status=200 action=purchase | top 1 productName by categoryId showperc=f countfield=total`
+   *  This search returns the top product purchased for each category. Do not show the percent field. Rename the count field to "total".
+   
 ## The `rare` command
 * Shows the least common values of a field set. 
 * `index=sales sourcetype=vendor_sales | rare product_name showperc=f limit=1` What is selling the worst, right now
 * `index=sales sourcetype=vendor_sales | rare Vendor` will return the least amount of product sold
 * *BY* clauses can be used to show results over a set of fields
+ 
+* Return the least common values in the "url" field. Limits the number of values returned to 5.
+
+`... | rare url limit=5`
+
+* Return the least common values organized by host
+
+`... | rare user by host`
 
 ## The `stats` command
 * Helps in calculating statistics about search results

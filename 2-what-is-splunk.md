@@ -177,3 +177,10 @@ Download the file through the web portal or the `wget -O` CLI tool
         * Event
         * Field
         * Value
+
+## First Lab: Getting Data In:
+1. Download the .zip file from the docs or the github. [search tutorial](https://docs.splunk.com/Documentation/Splunk/7.2.6/SearchTutorial/Systemrequirements#Download_the_tutorial_data_files) 
+2. Click the **Add Data** widget on the **Home** screen.
+3. Upload the *entire* `tutorials.zip` file; splunk will recognize it
+4.  * In the add data wizard, at the `Input Settings` portion; the regular expression needed for **Host**:
+      * click **Segment in Path**; Type `\\(.*)\/`
