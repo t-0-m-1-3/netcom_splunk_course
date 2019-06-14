@@ -43,29 +43,27 @@
 ### The `lookup` Command
 * If a lookup is not configured to run automatically, the `lookup` command needs to be used inside of searches. 
 
+### Lookup Lab
+----
+1. Upload the prices.csv lookup
+
 **Calculate the sales of each product** 
 ```index=web sourcetype=access* action=purchase
 | lookup product_lookup productId OUTPUT price product_name
 | stats sum(price) as sales by product_name
 ```
 ### Creating an Automatic Lookup
-* Under `Settings>Lookups>Automatic Lookups`
-* Click `New Automatic Lookup`
-* Select the destination app
-* Enter the lookup Name
-* Select the lookup table definition
-* Select host, source, sourcetype to apply the lookup to and specify the name.
-* Define the lookup input fields ( these exist in your events that you're relating to your lookup table )
-* Define the lookup output fields
+-----
+**Steps**
+1. In Splunk Web, select Settings > Lookups.
+2.  Under Actions for Automatic Lookups, click Add new.
+3.  Select the Destination app.
+4.  Give your automatic lookup a unique Name.
+6.  Select the Lookup table that you want to use in your fields lookup.
+7.  In the Apply to menu, select a host, source, or source type value to apply the lookup and give it a name in the named field.
+     *  The first field is the field in the lookup table that you want to match. The second field is a field from your events that matches the lookup table field. 
+8.  Under Lookup output fields provide one or more pairs of output fields.
+     *  The first field is the corresponding field that you want to output to events. The second field is the name that the output field should have in your events. 
 
-The Automatic lookups are available in your search 
-
-
-
-
-
-     a.       Describe lookups
-     
-     b.       Create a lookup file and create a lookup definition
-     
-     c.        Configure an automatic lookup
+9.  You can select the checkbox for Overwrite field values to overwrite the field values when the lookup runs.  Click Save.
+The Automatic lookup view appears, and the lookup that you have defined is listed.

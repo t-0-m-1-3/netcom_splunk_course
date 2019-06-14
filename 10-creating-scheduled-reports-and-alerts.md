@@ -8,7 +8,8 @@ Sending reports via email
 * From the `Save As` menu select `Report`
 * Enter the information and select `No` for the `time picker` ( it cannot be used )
 * After it is created click schedule
-#### Define the schedule to run in whatever period you need.
+###### Define the schedule to run in whatever period you need.
+
 #### Select the Time Range
 * By default the search time range is used.
 * You can select from presets, relative, or advanced
