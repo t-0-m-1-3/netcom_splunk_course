@@ -156,7 +156,4 @@ Just start typing
         1. `sourcetpye=linux_secure process | timechart count by FIELD`
         2. `sourcetpye=linux_secure process |timechart bins=100 limit=3 useother=false usenull=false count as "SET Count" by admin`
 
-# Book Stuff
-----
-## Chapter 2: Understanding Search:
  `sourcetype=access_combined* categoryID=*` 
