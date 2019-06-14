@@ -20,8 +20,10 @@ App management, Operations Management, Security & Compliance, and everything els
 * Structured and unstructured data; 
 * can be very hard to process due to this. 
 * Big Data types of issues
+[![Foo]( https://www.3pillarglobal.com/wp-content/uploads/2016/04/splunk_1.png)]( https://www.3pillarglobal.com/wp-content/uploads/2016/04/splunk_1.png)
 
 ## Splunk components
+[![Foo](https://docs.splunk.com/images/thumb/e/e0/Horizontal_scaling_new2_60.png/500px-Horizontal_scaling_new2_60.png)](https://docs.splunk.com/images/thumb/e/e0/Horizontal_scaling_new2_60.png/500px-Horizontal_scaling_new2_60.png)
 * Splunk Search Head:
     * Allow user to use the Search language
     * Distribute user search requests to indexers
@@ -53,20 +55,36 @@ App management, Operations Management, Security & Compliance, and everything els
 * Allow multiple workspace for different use cases/user roles to co-exist on a single splunk instance
 * 1000+ ready-made apps
 
+[![Foo](https://dev.splunk.com/web_assets/developers/devguide/Essentials01_solution.png)](https://dev.splunk.com/web_assets/developers/devguide/Essentials01_solution.png)
+
 ## Enhanced Solutions:
 IT Service Intel -> monitoring for analytics and OPS
 Splunk Enterprise Security -> Comprehensive Securtiy Informtaion and Event Management
 Splunk User Behavior Analysis -> finds know and unknown and hidden threats analyzing user behavior
 
 ## Users and Roles:
-3 main roles: Admin, Power, User
-roles control everything, admin can create new roles
+3 main roles: 
+    * Admin 
+    * Power 
+    * User
+* roles control everything, admin can create new roles
+
+```
+| rest /services/authentication/users | mvexpand roles | table realname, title, roles, email | join roles [ rest /services/authorization/roles | rename title as roles | search srchIndexesAllowed=* | table roles srchIndexesAllowed]
+```
+[![Foo](https://answers.splunk.com/storage/temp/65294-splunk-user-roles.jpg)](https://answers.splunk.com/storage/temp/65294-splunk-user-roles.jpg)
 
 ## Installing Splunk
+[![Foo](https://jamey.info/wp-content/uploads/2017/08/splunk.jpg)](https://jamey.info/wp-content/uploads/2017/08/splunk.jpg)
+
 Download the file through the web portal or the `wget -O` CLI tool
  
 ## Getting data into Splunk
- *Monitor*, *Upload single Files*, or *Forwarders* 
+[![Foo](https://cdn-images-1.medium.com/max/1600/1*zeQUCJBPDgShD-5pwINmDA.png)](https://cdn-images-1.medium.com/max/1600/1*zeQUCJBPDgShD-5pwINmDA.png) 
+
+#### *Monitor*, *Upload single Files*, or *Forwarders* 
+
+[![Foo](https://dev.splunk.com/web_assets/developers/devguide/WhatSplunkCanIndex.jpg)](https://answers.splunk.com/storage/temp/110179-62-home.png)
  Pull any data from any source:
   * Computers
   * Network devices
@@ -90,7 +108,11 @@ Download the file through the web portal or the `wget -O` CLI tool
 * Input Phase: handled at the source
 * Parsing Phase: handled by indexers
 * Indexing Phase: license meter run, after write, cannot be changed.
+
+[![Foo](https://docs.splunk.com/images/b/b7/Datapipeline_60.png)](https://docs.splunk.com/images/b/b7/Datapipeline_60.png)
+
 ## *Data Input Types*:
+[![Foo](https://dev.splunk.com/web_assets/developers/addonbuilder/AOB_datainputs1.png)](https://dev.splunk.com/web_assets/developers/addonbuilder/AOB_datainputs1.png)
 * *Files and Directories*: monitoring text files and/or dir structures of text files
 * *Network Data*: listeing on a port for network data
 * *Script Output*:executing a sript andusing the output from it as input
@@ -110,6 +132,7 @@ Download the file through the web portal or the `wget -O` CLI tool
 ## Add Input With Splunk Web
 * Admins can click the *Add Data* icon and run through the wizard on the *Home* page or the *Settings* panel
      
+[![Foo](https://www.learnsplunk.com/uploads/2/7/1/9/2719363/5212201_orig.png)](https://www.learnsplunk.com/uploads/2/7/1/9/2719363/5212201_orig.png)
 ## The Menu Contains 3 Options:
  * *Upload* allows only uploading of local files that get indexed once. Does not create `inputs.conf` and it never updated. 
  * *Monitor* Proives one-time or continuos monitoring of files, directories, http events, network ports, or data gatehring scripts on Enterprise instances
@@ -131,6 +154,7 @@ Download the file through the web portal or the `wget -O` CLI tool
  * Events are available immediately after they are indexed.
            
 ## User Interface
+[![Foo](https://cdn-images-1.medium.com/max/1600/1*zeQUCJBPDgShD-5pwINmDA.png)](https://cdn-images-1.medium.com/max/1600/1*zeQUCJBPDgShD-5pwINmDA.png) 
 * *Home App*
     * Current App
 * *Search App*

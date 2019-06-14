@@ -1,6 +1,10 @@
-# Book Stuff
-----
-## Chapter 2: Understanding Search:
+## Run basic searches
+Just start typing
+[![Foo](https://www.learnsplunk.com/uploads/2/7/1/9/2719363/7109108_orig.png)](https://www.learnsplunk.com/uploads/2/7/1/9/2719363/7109108_orig.png) 
+
+## Use autocomplete to help build a search
+[![Foo](https://cdn-images-1.medium.com/max/1600/1*lH7ebGzxGc4pdZtI0Zm87w.png)](https://cdn-images-1.medium.com/max/1600/1*lH7ebGzxGc4pdZtI0Zm87w.png) 
+ 
 * Using terms effectively:
     * Search terms are case insensitive
     * search terms are additive
@@ -21,16 +25,35 @@
         * `=` is reversed for specifying fields
         * `[]` is used for subsearches
     * You can use these operators in fairly complicated wyas
+* Using Wildcards Effectively:
+    * possible to use wildcards when needed
+    * Only Trailing wildcards are efficient `*bob` is less effieicnt thant `bob*`
+    * Wilcards are tested last: `world message="*world*"` is a more restrictive search 
 * Clicking to modify your search:
     * CLicking any word or fields value will add it to the search, if it's already there it will remove it
     * CLicking while holding `ALT` will append the search to the query appended by `NOT`
+
+  * Once you start typing a search, the assistant will pop open with Autocomplete suggestions for you
+  * You can keep typing or select word from the list
+  * Once you type a pipe `|` the assistant shows a list of commands to enter into the string
+  * You can then, keep typing or scroll through and select a string.
+  * Mouse over for more information on a command
+      * You can change the preferences for search assistant, enabled by default in the user preferences menu
+      * Default selection is *Compact*, choose *Full* for more information
+      * *Parentheses* are matched as you type, and matching ones are highlighted.
+      
+## Identify the contents of search results
+   * Matching results are returned immediately in reverse chronological order
+   * Events are parsed from machine data, to have time and metadata fields extracted
+      * timestamp, host, source, sourcetype, index
+## Refine searches
+   * Mousing over a search, keywords are highlighted, clicking these will add/exclude then to the search
+   * Results can be listed as *tables*, *lists*, and *raw* format. 
 * Event Segementation:
     * Different options change what is highlighted as you mouse over text
 * Field Widgets:
     * clicking on values will append them to the query
     * field values look like `key=value` in the text of an event
-* Time:
-    * You can click in on the time frame to zoom in on a search and not repeat that search
 * Using Fields in Search:
     * Fields appeart in the field picker on the left andudner every event
 * Using the Field Picker:
@@ -41,10 +64,8 @@
         * Select and Show in results
         * Charts ( both top values by time and overall )
         * Values
-* Using Wildcards Effectively:
-    * possible to use wildcards when needed
-    * Only Trailing wildcards are efficient `*bob` is less effieicnt thant `bob*`
-    * Wilcards are tested last: `world message="*world*"` is a more restrictive search 
+      
+## Set the time range of a search
 * All About Time:
     * Time is an important and confusing topic inside of Splunk. Time must be parsed on the way into the index, once data is indexed, it cannot be changed. 
 * How Splunk Parses Time:
@@ -62,49 +83,8 @@
 * `_indextime` vs `_time`:
     * events are generally not recieved at the exact same time; discrepancy can cause latency issues; 
     * important to remember time displayed is in the `_time` fields
-* Making Searching Faster:
-    * Starting a new search, you can speciffy the minimum time frame require to locate events
-    * Specify the index, if you have multiple indexes
-    * Specify other fields that are relevant `sourcetpye` and `host` are the most common
-    * Add more words relevant to the messages
-    * Expand you time range once you found events you need
-    * disable **Field Discovery**
-* Sharing Results:
-    * You can save and share results with people as long as you edit the appropriate permissions
-    * The Results will also be in the `jobs` window for a set amount of time **10 minutes default**
-    * Building a query, saving it, and making an alert out of it is a great way to streamline your applications monitoring processes. 
-    * Enter a name for the search after clicking on the menu dropdown. 
-    * Share allows you to edit permissions
-* Creating Alerts from Searches:
-    * Saved Searches can be run on a schedule, triggering alerts based on conditions of data found 
-    * Click **Alert** to bring up the menu
-    * **Schedule** step: provides a gui for real-time or onve every...
-    * **Trigger** lets you choose the conditions of how the alert will be triggered
-    * **Actions** lets you choose how the system will respond to the alerts found. 
-    * Running a script is deprecated, en leu of custom actions
-
-## Run basic searches
-Just start typing
-
-## Use autocomplete to help build a search
-  * Once you start typing a search, the assistant will pop open with Autocomplete suggestions for you
-  * You can keep typing or select word from the list
-  * Once you type a pipe `|` the assistant shows a list of commands to enter into the string
-  * You can then, keep typing or scroll through and select a string.
-  * Mouse over for more information on a command
-      * You can change the preferences for search assistant, enabled by default in the user preferences menu
-      * Default selection is *Compact*, choose *Full* for more information
-      * *Parentheses* are matched as you type, and matching ones are highlighted.
-      
-## Identify the contents of search results
-   * Matching results are returned immediately in reverse chronological order
-   * Events are parsed from machine data, to have time and metadata fields extracted
-      * timestamp, host, source, sourcetype, index
-## Refine searches
-   * Mousing over a search, keywords are highlighted, clicking these will add/exclude then to the search
-   * Results can be listed as *tables*, *lists*, and *raw* format. 
-      
-## Set the time range of a search
+    
+[![Foo](https://geek-university.com/wp-content/uploads/2016/03/time_range_picker.jpg)](https://geek-university.com/wp-content/uploads/2016/03/time_range_picker.jpg) 
    * Selecting a Specific Time in the dropdown next to the searchbar.
    * *Time Range Abbreviations*:
        * ranges are specified in the *Advanced* tab, 
@@ -116,10 +96,18 @@ Just start typing
                * `earliest=-2d@d latest=@d` looks back form two days ago, up to the beginning of today
                * `earliest=6/15/2017:12:30:00` looks back to that specific time
 ## Use the timeline
+[![Foo](https://www.loggly.com/wp-content/uploads/2019/03/LG-Blog-Body-SplunkCloudvsLoggly-Size-Q119-1-700x393.png)](https://www.loggly.com/wp-content/uploads/2019/03/LG-Blog-Body-SplunkCloudvsLoggly-Size-Q119-1-700x393.png) 
    * The Timeline will show distributions of events specified in the range
 ## Work with events
    * mouse over for details
 ## Control a search job
+* Making Searching Faster:
+    * Starting a new search, you can speciffy the minimum time frame require to locate events
+    * Specify the index, if you have multiple indexes
+    * Specify other fields that are relevant `sourcetpye` and `host` are the most common
+    * Add more words relevant to the messages
+    * Expand you time range once you found events you need
+    * disable **Field Discovery**
    * You can select a narrower range of time range, and you can click and drag across a series of bar. It will filter the search, without reexecuting it. 
    * There are other timeline controls, *Format Timeline*, *Zoom Out*, *Zoom To Selection*, *Deselect*
    * *Controlling and Saving Search Jobs*
@@ -127,8 +115,22 @@ Just start typing
        * use the job bar to control the execution. *Pause* and *Stop*
        * Setting Job Permissions: *Private*, *Everyone*, and *Lifetime*
    * *Sharing Search Results* Click the share bar
-       * Give everyone read permissions, extend sharable results for 7 days, get a shareable link
-       * Multiple users can see the same thing
+    * You can save and share results with people as long as you edit the appropriate permissions
+    * The Results will also be in the `jobs` window for a set amount of time **10 minutes default**
+    * Give everyone read permissions, extend sharable results for 7 days, get a shareable link
+    * Multiple users can see the same thing
+    * Building a query, saving it, and making an alert out of it is a great way to streamline your applications monitoring processes. 
+    * Enter a name for the search after clicking on the menu dropdown. 
+    * Share allows you to edit permissions
+* Creating Alerts from Searches:
+    * Saved Searches can be run on a schedule, triggering alerts based on conditions of data found 
+    * Click **Alert** to bring up the menu
+    * **Schedule** step: provides a gui for real-time or onve every...
+    * **Trigger** lets you choose the conditions of how the alert will be triggered
+    * **Actions** lets you choose how the system will respond to the alerts found. 
+    * Running a script is deprecated, en leu of custom actions
+
+       [![Foo](https://docs.splunk.com/images/thumb/6/6e/7.1.0_jobSettingsEveryone-compressor.png/500px-7.1.0_jobSettingsEveryone-compressor.png)](https://docs.splunk.com/images/thumb/6/6e/7.1.0_jobSettingsEveryone-compressor.png/500px-7.1.0_jobSettingsEveryone-compressor.png) 
     * *Exporting Search Results*: *CSV*, *XML*, *JSON*, or *Raw*
 ## Save search results
    * **Viewing Your Saved Jobs** in the activity window.
@@ -154,3 +156,7 @@ Just start typing
         1. `sourcetpye=linux_secure process | timechart count by FIELD`
         2. `sourcetpye=linux_secure process |timechart bins=100 limit=3 useother=false usenull=false count as "SET Count" by admin`
 
+# Book Stuff
+----
+## Chapter 2: Understanding Search:
+ `sourcetype=access_combined* categoryID=*` 
