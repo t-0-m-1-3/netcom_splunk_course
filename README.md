@@ -1,16 +1,10 @@
 ##### Notes:
 -----
-* What are they expecting:
 *   team background ETL Development mostly done on SQL
 *   loading batch files from clients to Data warehouse
 *   currently using splunk ( FTP logs, system event logs ) -> Other potentials ( logins -> whose logged in but not badged in? )
 *   Gain more expertise with the tool ( Alerting and Responding ) -> Cron jobs examples for running and reacting to events
 *   Alerting and Monitoring Production Events
-*   Dedicated Splunk team ( works for experian; global dashboards for executive reporting, wants the same skills )
-*   Generic Queries to look at logs, but mostly wants altering and monitoring products
-*   DevOps ( Enterprise  ); SSiS ( logs ); 
-*   Already a processes under to load things into splunk
-*   Wants to really be able to break down, and respond to the data.
 *   Digital Books  ( ensure private hosting of materials; `zip` )
 
 -----
