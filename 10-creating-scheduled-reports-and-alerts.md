@@ -48,18 +48,14 @@ Sending reports via email
 
 * **Alert Action: What happens when the alert triggers?**
   * When an alert triggers, it can initialize one or more alert actions. 
-    
-* Alerts are based on seraches that either ran:
-  * On a regular schedule
-  * in real time 
-* Alerts can be triggered when results match criteria
-* Based on needs, you can use alerts to:
-  * Trigger an entry in Triggered Alerts
-  * Log an event
-  * Output results to a lookup file
-  * send emails
-  * use a webhook
-  * Perform a custom action
+  
+| Alert Type    | WHen it Searches for events  | Trigger Options                      | Throttle Options                          |
+| ----          | ----                         | ----                                 | ----                                      |
+| **Scheuled**  | accoring to scheulde or cron | specify conditions to trigger off of | Specify a time period to suppress         |
+| **Real Time** | Search Contiuously           | **Per-Results**                      | specify time period or fields to suppress |
+| **RealTime**  | Search Continuously          | **Rolling Time Winwdow**             | specifiy a time period to suppress        |
+|               |                              |                                      |                                           |
+  
 ## Creating an Alert
 * Run a search
 * Save As > `Alert`
