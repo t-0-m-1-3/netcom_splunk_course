@@ -52,6 +52,14 @@
 | lookup product_lookup productId OUTPUT price product_name
 | stats sum(price) as sales by product_name
 ```
+[![Foo](https://www.tutorialspoint.com/splunk/images/lookup_1.jpg)](https://www.tutorialspoint.com/splunk/images/lookup_1.jpg)
+
+[![Foo](https://www.tutorialspoint.com/splunk/images/lookup_2.jpg)](https://www.tutorialspoint.com/splunk/images/lookup_2.jpg)
+
+[![Foo](https://www.tutorialspoint.com/splunk/images/lookup_4.jpg)](https://www.tutorialspoint.com/splunk/images/lookup_4.jpg)
+
+[![Foo](https://www.tutorialspoint.com/splunk/images/lookup_6.jpg)](https://www.tutorialspoint.com/splunk/images/lookup_6.jpg)
+
 [![Foo](https://www.tutorialspoint.com/splunk/images/lookup_7.jpg)](https://www.tutorialspoint.com/splunk/images/lookup_7.jpg)
 
 ### Creating an Automatic Lookup
