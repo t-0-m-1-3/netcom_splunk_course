@@ -116,6 +116,9 @@ The order in which the search is processes is:
     
 [![Foo](https://www.loggly.com/wp-content/uploads/2019/03/LG-Blog-Body-SplunkCloudvsLoggly-Size-Q119-1-700x393.png)](https://www.loggly.com/wp-content/uploads/2019/03/LG-Blog-Body-SplunkCloudvsLoggly-Size-Q119-1-700x393.png) 
      
+##  Using the job inspector to view search performance
 ------
-# uhhh
-     c.        Using the job inspector to view search performance
+Here's an example of the execution costs for a dedup search, run over All time:
+`* | dedup punct`
+
+[![Foo](https://docs.splunk.com/images/1/19/SearchInspectorExecCostsDedupEx.png)](https://docs.splunk.com/images/1/19/SearchInspectorExecCostsDedupEx.png) 
