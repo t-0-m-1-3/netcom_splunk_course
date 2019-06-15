@@ -49,5 +49,6 @@ One data model might have a field called http_referrer. This field might be miss
 
 ### Lab: Creating the Fields:
 * We're goingt to search the "web_application" host and create two fields using the `eval` command:
+
 [![Foo](https://www.tutorialspoint.com/splunk/images/calculated_fields_3.jpg)](https://www.tutorialspoint.com/splunk/images/calculated_fields_3.jpg)
 * Take those two eval functions and create them using the Web GUI
