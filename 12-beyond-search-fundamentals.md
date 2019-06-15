@@ -118,6 +118,8 @@ The order in which the search is processes is:
      
 ##  Using the job inspector to view search performance
 ------
+* Can be found on the `Search and Reporting App` under the `Job` tab
+* Can also be accessed with the SearchID**(SID)** and the **Search Head Endpoint** `http://search.head.endpoint:8000/manager/search/job_inspector?sid=3.1415926535897932384626433832795`
 Here's an example of the execution costs for a dedup search, run over All time:
 `* | dedup punct`
 
