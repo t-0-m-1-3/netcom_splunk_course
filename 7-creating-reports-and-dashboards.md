@@ -41,17 +41,17 @@ You can create reports via Splunk Web four ways:
 * Select a time range to include or not. ( adding the picker will allow you to adjust the time when you run the report next )
 * You can change the Additional Settings down at the bottom of the wizard once the report is created. 
 
-[![Foo]( https://www.3pillarglobal.com/wp-content/uploads/2016/04/splunk_1.png)]( https://www.3pillarglobal.com/wp-content/uploads/2016/04/splunk_1.png)
+[![Foo](https://www.tutorialspoint.com/splunk/images/reports_1.jpg)](https://www.tutorialspoint.com/splunk/images/reports_1.jpg)
 
 
-[![Foo]( https://www.3pillarglobal.com/wp-content/uploads/2016/04/splunk_1.png)]( https://www.3pillarglobal.com/wp-content/uploads/2016/04/splunk_3.png)
+[![Foo](https://www.tutorialspoint.com/splunk/images/reports_2.jpg)](https://www.tutorialspoint.com/splunk/images/reports_2.jpg)
 
 #### After clicking View
 ----
-[![Foo]( https://www.3pillarglobal.com/wp-content/uploads/2016/04/splunk_1.png)]( https://www.3pillarglobal.com/wp-content/uploads/2016/04/splunk_4.png)
+[![Foo](https://www.tutorialspoint.com/splunk/images/reports_4.jpg)](https://www.tutorialspoint.com/splunk/images/reports_4.jpg)
 
 
-### CLicking Open in Search
+### Clicking Open in Search
 ----
 
 [![Foo](https://www.tutorialspoint.com/splunk/images/reports_5.jpg)](https://www.tutorialspoint.com/splunk/images/reports_5.jpg)
