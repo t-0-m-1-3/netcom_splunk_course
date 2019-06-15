@@ -7,6 +7,8 @@
      
 ##        Overview of Data Examples
   -----
+  * Navigate to $SPLUNK_HOME/etc/apps/sample_app/logs, select maillog, then click Open.
+  * For Source type, click Email, then select sendmail_syslog.
   * [search tutorial](https://docs.splunk.com/Documentation/Splunk/7.2.6/SearchTutorial/Systemrequirements#Download_the_tutorial_data_files)
     * Download the data set from Add data tutorial and follow the instructions to load the tutorial data.
     * upload the entire `.zip`
