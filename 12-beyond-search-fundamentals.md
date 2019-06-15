@@ -3,6 +3,9 @@
 ### Ahh Home...
 [![Foo](https://www.learnsplunk.com/uploads/2/7/1/9/2719363/7109108_orig.png)](https://www.learnsplunk.com/uploads/2/7/1/9/2719363/7109108_orig.png) 
 
+### The Process Model for search
+----
+[![Foo](https://dev.splunk.com/web_assets/developers/devguide/Filter.jpg)](https://dev.splunk.com/web_assets/developers/devguide/Filter.jpg) 
 
 
 ### The Breakdown of the langeage elements
