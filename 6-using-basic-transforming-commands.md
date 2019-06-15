@@ -2,6 +2,8 @@
 * Order results into a data table, that splunk uses for statistical purposes
 * Needed to transform results into visuals
 
+[![Foo](https://www.tutorialspoint.com/splunk/images/schedule_alert_5.jpg)](https://www.tutorialspoint.com/splunk/images/schedule_alert_5.jpg)
+
 ##  The `top` command 
 * Finds the most common values in a result set; Defaults to Top 10
 * Automatically includes the count and percent columns 
@@ -60,6 +62,8 @@ Because a limit is not specified, this returns all the combinations of values fo
 `... | rare user by host`
 
 ## The `stats` command
+[![Foo](https://www.tutorialspoint.com/splunk/images/transforming_3.jpg)](https://www.tutorialspoint.com/splunk/images/transforming_3.jpg)
+
 * Helps in calculating statistics about search results
 * Most Common Stats Functions are:
     * `count`: returns the number of events matching the results
