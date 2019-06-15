@@ -41,6 +41,21 @@ You can create reports via Splunk Web four ways:
 * Select a time range to include or not. ( adding the picker will allow you to adjust the time when you run the report next )
 * You can change the Additional Settings down at the bottom of the wizard once the report is created. 
 
+[![Foo]( https://www.3pillarglobal.com/wp-content/uploads/2016/04/splunk_1.png)]( https://www.3pillarglobal.com/wp-content/uploads/2016/04/splunk_1.png)
+
+
+[![Foo]( https://www.3pillarglobal.com/wp-content/uploads/2016/04/splunk_1.png)]( https://www.3pillarglobal.com/wp-content/uploads/2016/04/splunk_3.png)
+
+#### After clicking View
+----
+[![Foo]( https://www.3pillarglobal.com/wp-content/uploads/2016/04/splunk_1.png)]( https://www.3pillarglobal.com/wp-content/uploads/2016/04/splunk_4.png)
+
+
+### CLicking Open in Search
+----
+
+[![Foo](https://www.tutorialspoint.com/splunk/images/reports_5.jpg)](https://www.tutorialspoint.com/splunk/images/reports_5.jpg)
+
 ### Preview your saved search
 ----
 * You can preview a search before running it by using search expansion. 
@@ -48,10 +63,11 @@ You can create reports via Splunk Web four ways:
 
 **Steps**
 1. Navigate to the Splunk Search page.
-2. In the Search bar, type the default report Errors in the last 24 hours.
+2. In the Search bar, type the default report`Errors in the last 24 hours`
 3. Open search expansion by using the keyboard shortcut `Command-Shift-E` (Mac OSX) or `Control-Shift-E` (Linux or Windows).
 4. The search expansion preview shows syntax highlighting and line numbers, if those features are turned on. 
-    
+
+
 ### Running Reports
 * Click the `Reports` tab and the name of the report you would like to run. 
 * Use the time range picker to change the time of the report to run it. 
@@ -136,17 +152,6 @@ Change the way the columns appear with table
     
 * consist of a paneled display of data 
 * reports can be used to create panels on a dashboard
-* To add a report to a dashboard, click the `Add to Dashboard` button
-* Name the dashboard, and provide a description
-* Change the permissions
-* Enter a title
-* Click `Report` for `Panel Powered By` 
-* For content, click `Column chart` 
-* Single reports can be used across dashboard, therefore, it's efficient to create more dashboard panels.
-* changes to the underlying report will be displayed in the dashboard.
-
-[![Foo](https://blog.rapid7.com/content/images/post-images/63982/pastedImage_0.png)](https://blog.rapid7.com/content/images/post-images/63982/pastedImage_0.png)
-
 * Build dashboards
   * Create a new dashboard
   * Add new visualizations to a dashboard
@@ -167,6 +172,24 @@ Change the way the columns appear with table
 * Add interactive and dynamic behavior
   * Use tokens to capture and transfer data.
   * Add event handlers to implement dynamic behavior.
+
+[![Foo](https://www.tutorialspoint.com/splunk/images/dashboard_1.jpg)](https://www.tutorialspoint.com/splunk/images/dashboard_1.jpg)
+
+* To add a report to a dashboard, click the `Add to Dashboard` button
+* Name the dashboard, and provide a description
+* Change the permissions
+* Enter a title
+* Click `Report` for `Panel Powered By` 
+* For content, click `Column chart` 
+* Single reports can be used across dashboard, therefore, it's efficient to create more dashboard panels.
+* changes to the underlying report will be displayed in the dashboard.
+
+### Saving the Dashboard
+[![Foo](https://www.tutorialspoint.com/splunk/images/dashboard_2.jpg)](https://www.tutorialspoint.com/splunk/images/dashboard_2.jpg)
+
+### Viewing the Complete Dashboard
+
+[![Foo](https://www.tutorialspoint.com/splunk/images/dashboard_3.jpg)](https://www.tutorialspoint.com/splunk/images/dashboard_3.jpg)
 
 #### Dashboard editor user interface
 
@@ -223,8 +246,7 @@ Use one of the following options.
 * The ellipsis menu next to `Edit` allows you to clone a dashboard. 
 * Set and View Default dashboards for login
 
-Edit a panel search
-
+## Edit a panel search
 Update the search driving a particular dashboard panel.
 
 When you are working with inline searches, the dashboard search bar has syntax highlighting and auto-complete features that can help you build a search string. To learn more, see Help reading searches in the Search Manual.

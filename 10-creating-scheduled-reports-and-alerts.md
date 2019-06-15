@@ -9,11 +9,14 @@ Sending reports via email
 * Enter the information and select `No` for the `time picker` ( it cannot be used )
 * After it is created click schedule
 ###### Define the schedule to run in whatever period you need.
+[![Foo](https://www.tutorialspoint.com/splunk/images/schedule_alert_1.jpg)](https://www.tutorialspoint.com/splunk/images/schedule_alert_1.jpg)
 
 #### Select the Time Range
 * By default the search time range is used.
 * You can select from presets, relative, or advanced
 * Typically the time range is relative to the schedule.     
+
+[![Foo](https://www.tutorialspoint.com/splunk/images/schedule_alert_2.jpg)](https://www.tutorialspoint.com/splunk/images/schedule_alert_2.jpg)
 
 #### Scheduled Window
 * This setting determines the time frame to run the report
@@ -26,6 +29,9 @@ Sending reports via email
 * `Run a Script`: runs a previously created script
 * `Webhook`: sends an HTTP Post request 
 * `Send Email`: sends the results in a formatted email.
+
+[![Foo](https://www.tutorialspoint.com/splunk/images/schedule_alert_3.jpg)](https://www.tutorialspoint.com/splunk/images/schedule_alert_3.jpg)
+
 
 ### Managing Reports: Editing Permissions
 * Under the `Edit` icon, there is an option to Edit the Permissions.
@@ -64,6 +70,8 @@ Sending reports via email
 * `Private`: only you can access, edit, and view triggered alerts
 * `Shared in app`: all users of the app can view the alerts ( by default everyone has read access, with power users having write access )
 
+[![Foo](https://www.tutorialspoint.com/splunk/images/schedule_alert_4.jpg)](https://www.tutorialspoint.com/splunk/images/schedule_alert_4.jpg)
+
 ### Choosing a Real-Time or Scheduled Alert Type
 ----
 * The Alert Type determins how splunk will search for events that match the alert
@@ -78,6 +86,12 @@ Sending reports via email
 * You can Throttle the execution of actions on results for periods of time
 * `Add Trigger Actions` to handle a variety of responese to the conditions once they are met. 
 * From the frequency menu, choose to run the search every hour, day, week, month, or a cron job schedule. 
+[![Foo](https://www.tutorialspoint.com/splunk/images/schedule_alert_5.jpg)](https://www.tutorialspoint.com/splunk/images/schedule_alert_5.jpg)
+
+### Save the Result
+----
+
+[![Foo](https://www.tutorialspoint.com/splunk/images/schedule_alert_6.jpg)](https://www.tutorialspoint.com/splunk/images/schedule_alert_6.jpg)
 
 ### Common Cron Examples
 ----
@@ -88,6 +102,7 @@ Sending reports via email
 */20 * * * 1-5    Every 20 minutes, Monday through Friday.
 0 9 1-7 * *       The first 7 days of every month at 9 AM.
 ```
+
 
 ## Best Practices
 ----
