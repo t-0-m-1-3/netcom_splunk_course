@@ -2,7 +2,7 @@
 * Order results into a data table, that splunk uses for statistical purposes
 * Needed to transform results into visuals
 
-[![Foo](https://www.tutorialspoint.com/splunk/images/schedule_alert_5.jpg)](https://www.tutorialspoint.com/splunk/images/schedule_alert_5.jpg)
+[![Foo](https://www.tutorialspoint.com/splunk/images/transforming_1.jpg)](https://www.tutorialspoint.com/splunk/images/transforming_1.jpg)
 
 ##  The `top` command 
 * Finds the most common values in a result set; Defaults to Top 10
