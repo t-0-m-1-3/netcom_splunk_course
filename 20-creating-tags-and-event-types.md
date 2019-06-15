@@ -24,7 +24,6 @@
 [![Foo](https://www.tutorialspoint.com/splunk/images/tags_1.jpg)](https://www.tutorialspoint.com/splunk/images/tags_1.jpg)
 
 * Create Tags by clicking the **Edit Tags** option
-
 [![Foo](https://www.tutorialspoint.com/splunk/images/tags_2.jpg)](https://www.tutorialspoint.com/splunk/images/tags_2.jpg)
 ----
    
