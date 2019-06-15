@@ -50,4 +50,4 @@ inding associations and correlations between data fields, and operating on multi
 
 * In other cases, it's usually better to use stats as the performance is higher, especially in a distributed search environment.
     * Often there is a unique id and stats can be used.
-[![Foo](https://www.3pillarglobal.com/wp-content/uploads/2016/04/splunk_1.png)](https://www.3pillarglobal.com/wp-content/uploads/2016/04/splunk_1.png)
+
